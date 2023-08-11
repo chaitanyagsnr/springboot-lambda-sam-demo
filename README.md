@@ -8,4 +8,4 @@ sam build --template sam-template.yml
 sam deploy --guided
 
 ### How to verify deployment
-curl <API Gateway Invoke URL>/hello
+curl `<API Gateway Invoke URL>`/hello
