@@ -1,0 +1,35 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.14'
+	id 'io.spring.dependency-management' version '1.1.2'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '11'
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-core
+	implementation 'com.amazonaws:aws-java-sdk-core:1.12.526'
+
+	// https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-lambda
+	implementation 'com.amazonaws:aws-java-sdk-lambda:1.12.526'
+
+	// https://mvnrepository.com/artifact/com.amazonaws.serverless/aws-serverless-java-container-springboot2
+	implementation 'com.amazonaws.serverless:aws-serverless-java-container-springboot2:1.9.3'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
