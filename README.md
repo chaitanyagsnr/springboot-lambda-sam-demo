@@ -1,8 +1,11 @@
 # springboot-lambda-sam-demo
 Demo application showing how to deploy Springboot app to AWS Lambda using AWS SAM
 
+### Prerequisites
+Python, AWS CLI and AWS SAM CLI have to be installed. An active AWS account is needed.
+
 ### Build
-`sam build --template sam-template.yml`
+`sam build --template cloudformation/sam-template.yml`
 
 ### Deploy
 `sam deploy --guided`
