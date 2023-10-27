@@ -18,7 +18,7 @@ Resources:
       CodeUri: ../
       Handler: com.example.samdemo.handler.LambdaHandler::handleRequest
       Runtime: java11
-      AutoPublishAlias: production
+      AutoPublishAlias: !Ref Env
       SnapStart:
         ApplyOn: PublishedVersions
       Architectures:
